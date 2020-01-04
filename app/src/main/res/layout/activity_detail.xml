@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".DetailActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/today_cock_txt">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/logo_img"
+                android:layout_width="130dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/logo_white_wide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="27dp"
+                android:src="@drawable/baseline_search_blue_18dp"
+                app:layout_constraintEnd_toStartOf="@+id/star_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/star_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="27dp"
+                android:src="@drawable/baseline_star_blue_18dp"
+                app:layout_constraintEnd_toStartOf="@+id/etc_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/etc_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/baseline_more_vert_blue_18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/today_cock_txt"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:text="상세보기"
+        android:background="#77a9ea"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:paddingLeft="23dp"
+        android:paddingTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/today_cock_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/today_cock_txt">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/bluesky"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/firstCock_txt"
+            android:layout_width="131dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="스카이 블루"
+            android:background="@drawable/line_shape"
+            android:textColor="#757575"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/info_lay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstCock_txt"
+            app:layout_constraintBottom_toTopOf="@+id/cockInfo_txt">
+
+            <ImageView
+                android:id="@+id/degree_img"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/degrees"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/degree_txt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/degree_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:text="26.5"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/degree_img"
+                app:layout_constraintEnd_toStartOf="@+id/alcohol_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/alcohol_img"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/wine"
+                app:layout_constraintStart_toEndOf="@+id/degree_txt"
+                app:layout_constraintEnd_toStartOf="@id/alcohol_txt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/alcohol_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:text="보드카"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/alcohol_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/cockInfo_txt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="아무나 드셔도 됩니다!"
+            android:layout_marginHorizontal="30dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_lay"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="14dp"
+        android:background="#d8f0f2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/today_cock_lay" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/taste_lay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop ="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_view">
+
+        <ImageView
+            android:id="@+id/candy_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/toffee"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/candy_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/candy_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2점"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/candy_img"
+            app:layout_constraintEnd_toStartOf="@id/fruit_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/fruit_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/orange"
+            app:layout_constraintStart_toEndOf="@id/candy_txt"
+            app:layout_constraintEnd_toStartOf="@id/fruit_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/fruit_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0점"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/fruit_img"
+            app:layout_constraintEnd_toStartOf="@id/lemon_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/lemon_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/lemon"
+            app:layout_constraintStart_toEndOf="@id/fruit_txt"
+            app:layout_constraintEnd_toStartOf="@id/lemon_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/lemon_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0점"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/lemon_img"
+            app:layout_constraintEnd_toStartOf="@id/juice_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/juice_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/fruit"
+            app:layout_constraintStart_toEndOf="@id/lemon_txt"
+            app:layout_constraintEnd_toStartOf="@id/juice_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/juice_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0점"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/juice_img"
+            app:layout_constraintEnd_toStartOf="@id/vodka_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/vodka_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/whisky"
+            app:layout_constraintStart_toEndOf="@id/juice_txt"
+            app:layout_constraintEnd_toStartOf="@id/vodka_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/vodka_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2점"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/vodka_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#d8f0f2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taste_lay"
+        />
+
+        <TextView
+            android:id="@+id/content_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="여기에 대충 스카이 블루 자세한 설명이 들어간다는
+이야기 경우에 따라서는 뭐 탄생 비화 같은거나 여러
+썰들을 풀어주어도 좋을거 같다고 생각하는데 이 글
+을 채우기가 너무 힘들구만요"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bottom_view"/>
+
+    <TextView
+        android:id="@+id/today_cock_txt2"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:text="비슷한 친구들이에요!"
+        android:background="#77a9ea"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:paddingLeft="23dp"
+        android:paddingTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/same_lay" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/same_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/first_lay"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/second_lay"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/same1_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/bluesky" />
+            <TextView
+                android:id="@+id/same1_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:text="스카이 블루"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_lay"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/first_lay"
+            app:layout_constraintEnd_toStartOf="@+id/third_lay"
+            app:layout_constraintTop_toTopOf="parent" >
+            <ImageView
+                android:id="@+id/same2_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/bluesky"/>
+            <TextView
+                android:id="@+id/same2_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:text="스카이 블루"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/third_lay"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/second_lay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <ImageView
+                android:id="@+id/same3_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/bluesky"/>
+            <TextView
+                android:id="@+id/same3_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:text="스카이 블루"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

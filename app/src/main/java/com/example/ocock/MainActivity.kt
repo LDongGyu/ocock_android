@@ -13,7 +13,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ocock.example_list.ExampleAdapter
 import com.example.ocock.example_list.ExampleItem
+import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.etc_img
+import kotlinx.android.synthetic.main.activity_main.search_img
+import kotlinx.android.synthetic.main.activity_main.star_img
+import kotlinx.android.synthetic.main.activity_main.today_cock_lay
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,6 +47,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         initExample()
+
+        today_cock_lay.setOnClickListener {
+            var intent = Intent(applicationContext,DetailActivity::class.java)
+            startActivity(intent)
+        }
 
         recom_btn.setOnClickListener{
             var intent = Intent(applicationContext,RecommendActivity::class.java)
