@@ -4,15 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/logo_img"
+                android:layout_width="130dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/logo_white_wide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="27dp"
+                android:src="@drawable/baseline_search_blue_18dp"
+                app:layout_constraintEnd_toStartOf="@+id/star_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/star_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="27dp"
+                android:src="@drawable/baseline_star_blue_18dp"
+                app:layout_constraintEnd_toStartOf="@+id/etc_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/etc_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/baseline_more_vert_blue_18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/today_cock_txt"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:text="오늘의 칵테일은?"
+        android:background="#77a9ea"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:paddingLeft="23dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/today_cock_txt">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="31dp"
+            android:src="@drawable/bluesky"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="131dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="31dp"
+            android:gravity="center"
+            android:text="스카이 블루"
+            android:textColor="#757575"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/info_lay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="30dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintBottom_toTopOf="@+id/cockInfo_txt">
+
+            <ImageView
+                android:id="@+id/degree_img"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/degrees"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/degree_txt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/degree_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:text="26.5"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/degree_img"
+                app:layout_constraintEnd_toStartOf="@+id/alcohol_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/alcohol_img"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/wine"
+                app:layout_constraintStart_toEndOf="@+id/degree_txt"
+                app:layout_constraintEnd_toStartOf="@id/alcohol_txt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/alcohol_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:text="보드카"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/alcohol_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/cockInfo_txt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="하늘색 푸르디 푸른 하늘 대충 여기에 설명 들어간다는 얘기"
+            android:layout_marginHorizontal="30dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_lay"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
