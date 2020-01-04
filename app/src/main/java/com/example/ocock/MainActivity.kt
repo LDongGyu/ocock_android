@@ -8,9 +8,16 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.ocock.example_list.ExampleAdapter
+import com.example.ocock.example_list.ExampleItem
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var exampleList: RecyclerView
+    private lateinit var exampleAdapter: ExampleAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,5 +39,39 @@ class MainActivity : AppCompatActivity() {
         etc_img.setOnClickListener {
             Toast.makeText(applicationContext,"etc",Toast.LENGTH_SHORT).show()
         }
+
+        initExample()
+    }
+
+    private fun initExample(){
+        exampleList = findViewById(R.id.example_list)
+        exampleAdapter = ExampleAdapter(this)
+        exampleList.adapter = exampleAdapter
+        exampleList.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+
+        exampleAdapter.data = listOf(
+            ExampleItem(
+                cockImg = R.drawable.bluesky,
+                cockName = "블루 스카이"
+            ),
+            ExampleItem(
+                cockImg = R.drawable.bluesky,
+                cockName = "블루 스카이"
+            ),
+            ExampleItem(
+                cockImg = R.drawable.bluesky,
+                cockName = "블루 스카이"
+            ),
+            ExampleItem(
+                cockImg = R.drawable.bluesky,
+                cockName = "블루 스카이"
+            ),
+            ExampleItem(
+                cockImg = R.drawable.bluesky,
+                cockName = "블루 스카이"
+            )
+        )
+
+        exampleAdapter.notifyDataSetChanged()
     }
 }
