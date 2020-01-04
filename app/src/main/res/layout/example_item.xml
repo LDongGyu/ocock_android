@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:text="스카이 블루"
         android:textSize="14sp"
+        android:layout_marginTop="13dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cock_img"
