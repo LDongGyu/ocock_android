@@ -1,5 +1,6 @@
 package com.example.ocock
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -41,6 +42,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         initExample()
+
+        recom_btn.setOnClickListener{
+            var intent = Intent(applicationContext,RecommendActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initExample(){

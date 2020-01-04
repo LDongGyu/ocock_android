@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".RecommendActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/today_cock_txt">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/logo_img"
+                android:layout_width="130dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/logo_white_wide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="27dp"
+                android:src="@drawable/baseline_search_blue_18dp"
+                app:layout_constraintEnd_toStartOf="@+id/star_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/star_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="27dp"
+                android:src="@drawable/baseline_star_blue_18dp"
+                app:layout_constraintEnd_toStartOf="@+id/etc_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/etc_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/baseline_more_vert_blue_18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/today_cock_txt"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:text="칵테일 추천"
+        android:background="#77a9ea"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:paddingLeft="23dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/line_shape"
+        android:gravity="center"
+        android:paddingHorizontal="23dp"
+        android:paddingVertical="6dp"
+        android:text="1. 먹고 싶지 않은 것을 골라주세요"
+        android:textColor="#757575"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/today_cock_txt" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/select_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@id/next_btn"/>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="35dp"
+        android:layout_marginBottom="27dp"
+        android:text = "다음"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/round_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
