@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         ab.setDisplayShowTitleEnabled(false)
 
         search_img.setOnClickListener {
-            Toast.makeText(applicationContext,"search",Toast.LENGTH_SHORT).show()
+            val intent = Intent(applicationContext, SearchActivity::class.java)
+            startActivity(intent)
         }
 
         star_img.setOnClickListener {
