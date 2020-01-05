@@ -1,6 +1,6 @@
 # ocock_android
 오늘의 칵테일 안드로이드 ver.  
-![logo_white](https://user-images.githubusercontent.com/34343170/71773856-fa15d480-2fa7-11ea-9c5e-dd0fd3189fbe.png)
+![오칵 로고 흰색_가로](https://user-images.githubusercontent.com/34343170/71773886-8922ec80-2fa8-11ea-8bc9-b61da3d6807a.png)
 ![logo_blue](https://user-images.githubusercontent.com/34343170/71773859-026e0f80-2fa8-11ea-9fe2-3fe5d7bcb19b.PNG)
 
 ## 기능
